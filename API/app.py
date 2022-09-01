@@ -14,8 +14,19 @@ from keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from keras.applications.mobilenet import MobileNet, preprocess_input
 from fastapi.responses import ORJSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
-
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 MODEL = load_model("fruits.h5")
 CLASS_NAMES = ["Apple","Banana","Cherry","Dragon Fruit","Mango","Orange","Papaya","Pineapple"]
 
