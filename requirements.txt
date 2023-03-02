@@ -43,7 +43,7 @@ depthai-sdk==1.1.6
 distlib==0.3.4
 Django==4.0.5
 django-cors-headers==3.13.0
-dlib @ file:///C:/Users/deepu/Downloads/dlib-19.22.99-cp310-cp310-win_amd64.whl
+https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp310-win_amd64.whl
 docopt==0.6.2
 entrypoints==0.3
 et-xmlfile==1.1.0
